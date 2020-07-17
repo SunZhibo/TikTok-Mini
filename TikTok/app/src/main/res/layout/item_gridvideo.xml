@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="15dp"
+            android:orientation="vertical"
+            android:background="@animator/shadow"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true">
+
+            <com.example.tiktok.view.CircleImageView
+                android:id="@+id/iv_head"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="10dp"
+                app:es_shape_type="round"
+                android:scaleType="centerCrop"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_alignParentStart="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="46dp"
+                >
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/white"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    />
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

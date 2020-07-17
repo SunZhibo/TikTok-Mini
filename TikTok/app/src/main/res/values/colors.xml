@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#151723</color>
+    <color name="oldColorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#151723</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="navigate">#000000</color>
+    <color name="background">#161824</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="buttonRed">#FF0041</color>
+    <color name="color_tag">#9B9B9B</color>
+    <color name="color_link">#FFDDA4</color>
+    <color name="color_FF0041">#ff2c54</color>
+    <color name="white">#fff</color>
+</resources>

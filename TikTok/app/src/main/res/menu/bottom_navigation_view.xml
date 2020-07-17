@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_main_page"
+        android:title="首页"
+        android:icon = "@null"/>
+    <item
+        android:id="@+id/bottom_same_city"
+        android:icon = "@null"
+        android:title="同城" />
+    <item
+        android:id="@+id/bottom_upload"
+        android:icon="@mipmap/upload_main_menu"
+        android:title="@null" />
+    <item
+        android:id="@+id/bottom_message"
+        android:icon = "@null"
+        android:title="消息" />
+    <item
+        android:id="@+id/bottom_me"
+        android:icon = "@null"
+        android:title="我" />
+</menu>

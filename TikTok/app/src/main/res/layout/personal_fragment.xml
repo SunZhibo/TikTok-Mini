@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:layout_behavior=".utils.AppbarZoomBehavior">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:contentScrim="@color/background"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"/>
+
+                    <include layout="@layout/personal_header"/>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:layout_collapseMode="pin">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="test_tyyyy"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            android:layout_centerInParent="true"/>
+
+                        <com.example.tiktok.view.IconFontTextView
+                            android:id="@+id/iv_more"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:text="@string/icon_more"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/white"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_circle_halfwhite"/>
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.androidkun.xtablayout.XTabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:xTabIndicatorColor="#FF9F00"
+                app:xTabSelectedTextColor="@android:color/white"
+                app:xTabTextColor="#CCCCCC"
+                app:xTabIndicatorWidth="90dp"
+                app:xTabTextBold="true"
+                app:xTabTextSize="15sp"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>
