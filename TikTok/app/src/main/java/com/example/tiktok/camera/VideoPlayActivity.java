@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.Nullable;
@@ -32,6 +33,7 @@ public class VideoPlayActivity extends AppCompatActivity {
         videoPath = data.getStringExtra(TAG);
         intitVideo();
         initButton();
+        Toast.makeText(VideoPlayActivity.this, "视频已拍摄，储存为" + videoPath, Toast.LENGTH_LONG).show();
     }
 
     private void intitVideo() {
