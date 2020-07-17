@@ -24,6 +24,7 @@ import com.example.tiktok.network.GetVideosResponse;
 import com.example.tiktok.network.IMiniDouyinService;
 import com.example.tiktok.network.PostVideoResponse;
 import com.example.tiktok.network.Video;
+import com.example.tiktok.view.NoScrollViewPager;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private IMiniDouyinService miniDouyinService = retrofit.create(IMiniDouyinService.class);
     private List<Video> mVideos = new ArrayList<>();
 
-    private ViewPager pager;
+    private NoScrollViewPager pager;
     private XTabLayout tabLayout;
     private ImageView camera;
 
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         pager.setOffscreenPageLimit(2);
+        pager.setNoScroll(true);
         tabLayout.setupWithViewPager(pager);
     }
 
